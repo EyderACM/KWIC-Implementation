@@ -17,8 +17,8 @@ const KwicApp = () => {
   const [kwikWords, setKwikWords] = useState<String[]>([])
 
   return (
-    <Box bg='cyan.400' w='full' minHeight='100vh'>
-      <Center h='full'>
+    <Box bg='cyan.400' w='full' minHeight='100vh' h='100vh'>
+      <Center h='100%'>
         <Box
           bg='white'
           w={{ base: '90vw', sm: '60vw' }}
