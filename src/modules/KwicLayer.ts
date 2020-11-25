@@ -2,7 +2,7 @@ import kwicSplit from './KwicSplit'
 import kwicCombinations from './KwicCombinations'
 import kwicAlphabetizer from './KwicAlphabetizer'
 
-const kwicModule = () => {
+const kwicLayer = () => {
   function determineKwic(sentence: String) {
     const splitSentece = kwicSplit.splitSentence(sentence)
     const sentenceCombinations = kwicCombinations.combineWords(splitSentece)
@@ -15,4 +15,4 @@ const kwicModule = () => {
   }
 }
 
-export default kwicModule()
+export default kwicLayer()
