@@ -1,4 +1,6 @@
-const kwicCombination = () => {
+import ComponentLayer from 'interfaces/ComponentLayer'
+
+const kwicCombination = (): ComponentLayer => {
   function arrayRotate(arr) {
     arr.unshift(arr.pop())
     return arr
@@ -13,9 +15,13 @@ const kwicCombination = () => {
     return combinations
   }
 
+  function executeFunction(words: String[]) {
+    return combineWords(words)
+  }
+
   return {
-    combineWords,
+    executeFunction,
   }
 }
 
-export default kwicCombination()
+export default kwicCombination

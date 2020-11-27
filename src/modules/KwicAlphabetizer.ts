@@ -1,4 +1,6 @@
-const kwicAlphabetizer = () => {
+import ComponentLayer from 'interfaces/ComponentLayer'
+
+const kwicAlphabetizer = (): ComponentLayer => {
   function capitalize(word) {
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
   }
@@ -16,10 +18,14 @@ const kwicAlphabetizer = () => {
     return sentences.sort()
   }
 
+  function executeFunction(words: String[][]) {
+    const alphabethized = alphabetize(words)
+    return sortSentences(alphabethized)
+  }
+
   return {
-    alphabetize,
-    sortSentences,
+    executeFunction,
   }
 }
 
-export default kwicAlphabetizer()
+export default kwicAlphabetizer

@@ -1,11 +1,17 @@
-const kwicSplit = () => {
+import ComponentLayer from 'interfaces/ComponentLayer'
+
+const kwicSplit = (): ComponentLayer => {
   function splitSentence(sentence: String) {
     return sentence.split(' ')
   }
 
+  function executeFunction(sentence: String) {
+    return splitSentence(sentence)
+  }
+
   return {
-    splitSentence,
+    executeFunction,
   }
 }
 
-export default kwicSplit()
+export default kwicSplit
